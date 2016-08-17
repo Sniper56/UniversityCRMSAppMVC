@@ -100,6 +100,7 @@
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\CourseViewController.cs" />
     <Compile Include="Controllers\DepartmentController.cs" />
+    <Compile Include="Controllers\TeacherController.cs" />
     <Compile Include="DAL\CourseGateway.cs" />
     <Compile Include="DAL\CourseViewGateway.cs" />
     <Compile Include="BLL\CourseViewManager.cs" />
@@ -123,6 +124,7 @@
     <Content Include="Views\Department\Save.cshtml" />
     <Content Include="Views\Department\GetAllDepartment.cshtml" />
     <Content Include="Views\Course\SaveCourse.cshtml" />
+    <Content Include="Views\Teacher\SaveTeacher.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
