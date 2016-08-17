@@ -7,7 +7,7 @@ namespace UniversityCRMSAppWeb.Models
 {
     public class SemesterModel
     {
-        public int SemesterId { get; set; }
-        public string Semester { get; set; }
+        public int Id { get; set; }
+       public string Semester { get; set; }
     }
 }

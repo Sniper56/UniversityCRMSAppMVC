@@ -10,6 +10,9 @@ namespace UniversityCRMSAppWeb.BLL
     public class TeacherManager
     {
         TeacherGateway teacherGateway = new TeacherGateway();
+        CourseGateway courseGateway=new CourseGateway();
+        AssingCourseViewManager assingCourseViewManager = new AssingCourseViewManager();
+
         public int SaveTeacher(TeacherModel teacher)
         {
             return teacherGateway.SaveTeacher(teacher);
@@ -24,18 +27,18 @@ namespace UniversityCRMSAppWeb.BLL
         {
             return teacherGateway.GetTeacherDesignation();
         }
-
-        public bool IsTeacherEmailExist( string email)
+        public List<CourseModel> GetAllCourses()
         {
-            TeacherModel isteacherEmailExist = teacherGateway.IsTecherEamilExist(email);
-            if (isteacherEmailExist != null)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return courseGateway.GetAllCourses();
+        }
+        public List<TeacherModel> GetAllTeachers()
+        {
+            return teacherGateway.GetAllTeacher();
+        }
+
+        public decimal GetTakenCredit(int dId, int tId)
+        {
+            return assingCourseViewManager.GetTakenCredit(dId, tId);
         }
     }
 }
