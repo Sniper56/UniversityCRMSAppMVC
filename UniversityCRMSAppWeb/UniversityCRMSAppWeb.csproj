@@ -94,13 +94,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BLL\AllocateClassroomManager.cs" />
     <Compile Include="BLL\CourseManager.cs" />
     <Compile Include="BLL\DepartmentManager.cs" />
     <Compile Include="BLL\TeacherManager.cs" />
+    <Compile Include="Controllers\AllocateClassroomsController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\CourseViewController.cs" />
     <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\TeacherController.cs" />
+    <Compile Include="DAL\AllocateClassroomGateway.cs" />
     <Compile Include="DAL\CourseGateway.cs" />
     <Compile Include="DAL\CourseViewGateway.cs" />
     <Compile Include="BLL\CourseViewManager.cs" />
@@ -109,10 +112,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AllocateClassroomModel.cs" />
     <Compile Include="Models\CourseModel.cs" />
     <Compile Include="Models\CourseView.cs" />
+    <Compile Include="Models\DayModel.cs" />
     <Compile Include="Models\DepartmentModel.cs" />
     <Compile Include="Models\DesignationModel.cs" />
+    <Compile Include="Models\RoomModel.cs" />
     <Compile Include="Models\SemesterModel.cs" />
     <Compile Include="Models\TeacherModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -134,6 +140,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\AllocateClassrooms\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

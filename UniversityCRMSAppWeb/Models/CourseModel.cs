@@ -7,6 +7,7 @@ namespace UniversityCRMSAppWeb.Models
 {
     public class CourseModel
     {
+        
         public int CourseId { get; set; }
         public string CourseCode { get; set; }
         public float Credit { get; set; }
