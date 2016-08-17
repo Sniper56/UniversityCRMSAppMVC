@@ -1,0 +1,32 @@
+﻿@using UniversityCRMSAppWeb.Models
+@model IEnumerable<DepartmentModel>
+@{
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetAllDepartment</title>
+</head>
+<body>
+    <div>
+        <fieldset>
+            <legend> View all Departments</legend>
+            <table border="1">
+                <tr><th>Department Code</th><th>Department Name</th></tr>
+                @foreach (DepartmentModel department in Model)
+                {
+                    <tr>
+                        <td>@department.DepartmentCode</td>
+                        <td>@department.DepartmentName</td>
+                    </tr>
+                }
+            </table>
+        </fieldset>
+    </div>
+</body>
+</html>

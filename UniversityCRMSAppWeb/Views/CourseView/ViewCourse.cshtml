@@ -30,13 +30,13 @@
                                 }
                             </select>
                         </td>
-                        
+
 
                         @*<td>DepartmentName</td>
-                        <td>
-                            @Html.DropDownListFor(model => model.DepartmentId, new SelectList(depts, "DepartmentId", "DepartmentName"), "-- Select Department--")
-                            @Html.ValidationMessageFor(m=>m.DepartmentId)
-                        </td>*@
+                            <td>
+                                @Html.DropDownListFor(model => model.DepartmentId, new SelectList(depts, "DepartmentId", "DepartmentName"), "-- Select Department--")
+                                @Html.ValidationMessageFor(m=>m.DepartmentId)
+                            </td>*@
 
                         <td><input type="submit" id="Search" value="Search"></td>
 
@@ -69,14 +69,14 @@
             </table>
         </fieldset>
     </div>
-    
+
     @*<script src="~/Scripts/jquery-3.1.0.js"></script>
-            <script src="~/Scripts/jquery.validate.js"></script>
-            <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>*@
+        <script src="~/Scripts/jquery.validate.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>*@
     @section Scripts{
         <script>
-            $(document).ready(function() {
-                $("#DepartmentId").change(function() {
+            $(document).ready(function () {
+                $("#DepartmentId").change(function () {
                     @*var json = { RegNo: regNo };
                 $.ajax({
                     type: "POST",

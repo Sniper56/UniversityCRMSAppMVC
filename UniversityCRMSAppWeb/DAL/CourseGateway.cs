@@ -58,7 +58,7 @@ namespace UniversityCRMSAppWeb.DAL
                 while (reader.Read())
                 {
                     SemesterModel semester = new SemesterModel();
-                    semester.Id = int.Parse(reader["SemesterId"].ToString());
+                    semester.SemesterId = int.Parse(reader["SemesterId"].ToString());
                     semester.Semester = reader["SemisterName"].ToString();
                     semesterlList.Add(semester);
                 }
@@ -70,7 +70,7 @@ namespace UniversityCRMSAppWeb.DAL
         public CourseModel GetCourseByCodeAndName(string courseCode, string courseName)
         {
             SqlConnection connection = new SqlConnection(connectinDB);
-            string query = "SELECT * FROM Course WHERE CourseCode='" + courseCode + "' and '" + courseName + "'";
+            string query = "SELECT * FROM Course WHERE CourseCode='" + courseCode + "' and CourseName= '" + courseName + "'";
             SqlCommand command = new SqlCommand(query, connection);
             CourseModel courses = null;
             connection.Open();
