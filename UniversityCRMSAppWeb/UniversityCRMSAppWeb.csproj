@@ -132,6 +132,7 @@
     <Content Include="Views\Course\SaveCourse.cshtml" />
     <Content Include="Views\Teacher\SaveTeacher.cshtml" />
     <Content Include="Views\AllocateClassrooms\AllocateClassRoom.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
