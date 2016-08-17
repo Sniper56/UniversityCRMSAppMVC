@@ -20,12 +20,6 @@ C:\Users\Javedul Ferdous\Documents\Visual Studio 2013\Projects\UniversityCRMSApp
 C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\UniversityCRMSAppWeb.dll.config
 C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\UniversityCRMSAppWeb.dll
 C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\UniversityCRMSAppWeb.pdb
-C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Helpers.dll
-C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Mvc.dll
-C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Razor.dll
-C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.Deployment.dll
-C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.dll
-C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.Razor.dll
 C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Razor.xml
 C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.xml
 C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.Deployment.xml

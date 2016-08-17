@@ -77,7 +77,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Helpers.xml" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Mvc.xml" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.Razor.xml" />
+    <Content Include="bin\System.Web.Webpages.Deployment.dll" />
+    <Content Include="bin\System.Web.Webpages.Deployment.xml" />
+    <Content Include="bin\System.Web.Webpages.dll" />
+    <Content Include="bin\System.Web.Webpages.Razor.dll" />
+    <Content Include="bin\System.Web.Webpages.Razor.xml" />
+    <Content Include="bin\System.Web.Webpages.xml" />
+    <Content Include="bin\UniversityCRMSAppWeb.dll" />
+    <Content Include="bin\UniversityCRMSAppWeb.pdb" />
     <Content Include="Global.asax" />
+    <None Include="bin\UniversityCRMSAppWeb.dll.config" />
     <None Include="Scripts\jquery-3.1.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.0.js" />
     <Content Include="Scripts\jquery-3.1.0.min.js" />
@@ -95,24 +110,32 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="BLL\AllocateClassroomManager.cs" />
+    <Compile Include="BLL\AssingCourseViewManager.cs" />
+    <Compile Include="BLL\CourseAssingManager.cs" />
     <Compile Include="BLL\CourseManager.cs" />
     <Compile Include="BLL\DepartmentManager.cs" />
+    <Compile Include="BLL\SemestersManager.cs" />
     <Compile Include="BLL\TeacherManager.cs" />
     <Compile Include="Controllers\AllocateClassroomsController.cs" />
+    <Compile Include="Controllers\CourseAssignController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\CourseViewController.cs" />
     <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\TeacherController.cs" />
     <Compile Include="DAL\AllocateClassroomGateway.cs" />
+    <Compile Include="DAL\AssingCourseViewGateway.cs" />
+    <Compile Include="DAL\CourseAssignGateway.cs" />
     <Compile Include="DAL\CourseGateway.cs" />
     <Compile Include="DAL\CourseViewGateway.cs" />
     <Compile Include="BLL\CourseViewManager.cs" />
     <Compile Include="DAL\DepartmentGateway.cs" />
+    <Compile Include="DAL\SemestersGateway.cs" />
     <Compile Include="DAL\TeacherGateway.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AllocateClassroomModel.cs" />
+    <Compile Include="Models\CourseAssingModel.cs" />
     <Compile Include="Models\CourseModel.cs" />
     <Compile Include="Models\CourseView.cs" />
     <Compile Include="Models\DayModel.cs" />
@@ -133,6 +156,7 @@
     <Content Include="Views\Teacher\SaveTeacher.cshtml" />
     <Content Include="Views\AllocateClassrooms\AllocateClassRoom.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\CourseAssign\CourseAssignToTeacher.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

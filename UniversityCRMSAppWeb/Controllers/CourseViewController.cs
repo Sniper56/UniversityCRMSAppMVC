@@ -15,11 +15,8 @@ namespace UniversityCRMSAppWeb.Controllers
 
         public ActionResult ViewCourse()
         {
-
-
             var departments = departmentManager.GetDepartment();
-
-
+            
             ViewBag.Departments = departments;
 
             ViewBag.PostBack = false;
