@@ -1,0 +1,57 @@
+C:\Users\Javedul Ferdous\Documents\Visual Studio 2013\Projects\UniversityCRMSAppWeb\UniversityCRMSAppWeb\obj\Debug\UniversityCRMSAppWeb.csprojResolveAssemblyReference.cache
+C:\Users\Javedul Ferdous\Documents\Visual Studio 2013\Projects\UniversityCRMSAppWeb\UniversityCRMSAppWeb\bin\UniversityCRMSAppWeb.dll.config
+C:\Users\Javedul Ferdous\Documents\Visual Studio 2013\Projects\UniversityCRMSAppWeb\UniversityCRMSAppWeb\bin\UniversityCRMSAppWeb.dll
+C:\Users\Javedul Ferdous\Documents\Visual Studio 2013\Projects\UniversityCRMSAppWeb\UniversityCRMSAppWeb\bin\UniversityCRMSAppWeb.pdb
+C:\Users\Javedul Ferdous\Documents\Visual Studio 2013\Projects\UniversityCRMSAppWeb\UniversityCRMSAppWeb\bin\System.Web.Helpers.dll
+C:\Users\Javedul Ferdous\Documents\Visual Studio 2013\Projects\UniversityCRMSAppWeb\UniversityCRMSAppWeb\bin\System.Web.Mvc.dll
+C:\Users\Javedul Ferdous\Documents\Visual Studio 2013\Projects\UniversityCRMSAppWeb\UniversityCRMSAppWeb\bin\System.Web.Razor.dll
+C:\Users\Javedul Ferdous\Documents\Visual Studio 2013\Projects\UniversityCRMSAppWeb\UniversityCRMSAppWeb\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Javedul Ferdous\Documents\Visual Studio 2013\Projects\UniversityCRMSAppWeb\UniversityCRMSAppWeb\bin\System.Web.Webpages.dll
+C:\Users\Javedul Ferdous\Documents\Visual Studio 2013\Projects\UniversityCRMSAppWeb\UniversityCRMSAppWeb\bin\System.Web.Webpages.Razor.dll
+C:\Users\Javedul Ferdous\Documents\Visual Studio 2013\Projects\UniversityCRMSAppWeb\UniversityCRMSAppWeb\bin\System.Web.Razor.xml
+C:\Users\Javedul Ferdous\Documents\Visual Studio 2013\Projects\UniversityCRMSAppWeb\UniversityCRMSAppWeb\bin\System.Web.Webpages.xml
+C:\Users\Javedul Ferdous\Documents\Visual Studio 2013\Projects\UniversityCRMSAppWeb\UniversityCRMSAppWeb\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Javedul Ferdous\Documents\Visual Studio 2013\Projects\UniversityCRMSAppWeb\UniversityCRMSAppWeb\bin\System.Web.Webpages.Razor.xml
+C:\Users\Javedul Ferdous\Documents\Visual Studio 2013\Projects\UniversityCRMSAppWeb\UniversityCRMSAppWeb\bin\System.Web.Helpers.xml
+C:\Users\Javedul Ferdous\Documents\Visual Studio 2013\Projects\UniversityCRMSAppWeb\UniversityCRMSAppWeb\bin\System.Web.Mvc.xml
+C:\Users\Javedul Ferdous\Documents\Visual Studio 2013\Projects\UniversityCRMSAppWeb\UniversityCRMSAppWeb\obj\Debug\UniversityCRMSAppWeb.dll
+C:\Users\Javedul Ferdous\Documents\Visual Studio 2013\Projects\UniversityCRMSAppWeb\UniversityCRMSAppWeb\obj\Debug\UniversityCRMSAppWeb.pdb
+<<<<<<< HEAD
+C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\UniversityCRMSAppWeb.dll.config
+C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\UniversityCRMSAppWeb.dll
+C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\UniversityCRMSAppWeb.pdb
+C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Helpers.dll
+C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Mvc.dll
+C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Razor.dll
+C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.dll
+C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.Razor.dll
+C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Razor.xml
+C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.xml
+C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.Razor.xml
+C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Helpers.xml
+C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Mvc.xml
+C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\obj\Debug\UniversityCRMSAppWeb.csprojResolveAssemblyReference.cache
+C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\obj\Debug\UniversityCRMSAppWeb.dll
+C:\Users\Javedul Ferdous\Desktop\Project\UniversityCRMSAppMVC\UniversityCRMSAppWeb\obj\Debug\UniversityCRMSAppWeb.pdb
+=======
+C:\Users\Tofael\Documents\GitHub\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\UniversityCRMSAppWeb.dll.config
+C:\Users\Tofael\Documents\GitHub\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\UniversityCRMSAppWeb.dll
+C:\Users\Tofael\Documents\GitHub\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\UniversityCRMSAppWeb.pdb
+C:\Users\Tofael\Documents\GitHub\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Helpers.dll
+C:\Users\Tofael\Documents\GitHub\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Mvc.dll
+C:\Users\Tofael\Documents\GitHub\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Razor.dll
+C:\Users\Tofael\Documents\GitHub\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Tofael\Documents\GitHub\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.dll
+C:\Users\Tofael\Documents\GitHub\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.Razor.dll
+C:\Users\Tofael\Documents\GitHub\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Razor.xml
+C:\Users\Tofael\Documents\GitHub\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.xml
+C:\Users\Tofael\Documents\GitHub\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Tofael\Documents\GitHub\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.Razor.xml
+C:\Users\Tofael\Documents\GitHub\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Helpers.xml
+C:\Users\Tofael\Documents\GitHub\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Mvc.xml
+C:\Users\Tofael\Documents\GitHub\UniversityCRMSAppMVC\UniversityCRMSAppWeb\obj\Debug\UniversityCRMSAppWeb.csprojResolveAssemblyReference.cache
+C:\Users\Tofael\Documents\GitHub\UniversityCRMSAppMVC\UniversityCRMSAppWeb\obj\Debug\UniversityCRMSAppWeb.dll
+C:\Users\Tofael\Documents\GitHub\UniversityCRMSAppMVC\UniversityCRMSAppWeb\obj\Debug\UniversityCRMSAppWeb.pdb
+>>>>>>> 034963e457304d6ea4f153108482e022fbabc228

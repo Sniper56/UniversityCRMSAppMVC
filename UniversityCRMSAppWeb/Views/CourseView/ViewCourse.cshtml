@@ -1,0 +1,99 @@
+﻿@using UniversityCRMSAppWeb.Models
+@model UniversityCRMSAppWeb.Models.CourseModel
+@{
+    ViewBag.Title = "View Course Statics";
+    var courses = ViewBag.Courses;
+    List<DepartmentModel> dept = ViewBag.Departments;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewCourse</title>
+</head>
+<body>
+    <div>
+        <fieldset>
+            <legend> View Course Statics</legend>
+            <form method="Post" id="form">
+                <table>
+                    <tr>
+                        <td><label>DepartmentName</label></td>
+                        <td>
+                            <select name="DepartmentId" id="DepartmentId">
+                                <option value="0">Select...</option>
+                                @foreach (var depts in dept)
+                                {
+                                    <option value="@depts.DepartmentId">@depts.DepartmentName</option>
+                                }
+                            </select>
+                        </td>
+                        
+
+                        @*<td>DepartmentName</td>
+                        <td>
+                            @Html.DropDownListFor(model => model.DepartmentId, new SelectList(depts, "DepartmentId", "DepartmentName"), "-- Select Department--")
+                            @Html.ValidationMessageFor(m=>m.DepartmentId)
+                        </td>*@
+
+                        <td><input type="submit" id="Search" value="Search"></td>
+
+                    </tr>
+
+                </table>
+            </form>
+            <br />
+            <br />
+
+            <table border="1">
+
+                @if (ViewBag.PostBack)
+                {
+
+                    <tr>Course Information</tr>
+                    <tr><th bgcolor="#e0e0d1">Code</th><th bgcolor="#e0e0d1">Name/Title</th><th bgcolor="#e0e0d1">Semester</th><th bgcolor="#e0e0d1">Assigned To</th></tr>
+                    foreach (var items in courses)
+                    {
+                        <tr>
+                            <td>@items.Code</td>
+                            <td>@items.Name</td>
+                            <td>@items.SemesterName</td>
+                            <td>@items.TeacherName</td>
+                        </tr>
+                    }
+
+                }
+
+            </table>
+        </fieldset>
+    </div>
+    
+    @*<script src="~/Scripts/jquery-3.1.0.js"></script>
+            <script src="~/Scripts/jquery.validate.js"></script>
+            <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>*@
+    @section Scripts{
+        <script>
+            $(document).ready(function() {
+                $("#DepartmentId").change(function() {
+                    @*var json = { RegNo: regNo };
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("GetDepartmentNameByRegNo", "ViewResult")',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(json),
+                    success: function (data) {
+                        var testdata = data;
+                        $("#DepartmentName").val(data.DepartmentName);
+
+
+                    }
+                });*@
+                    $("#form").submit();
+                });
+            });
+        </script>
+    }
+</body>
+</html>
