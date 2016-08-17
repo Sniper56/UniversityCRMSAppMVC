@@ -24,5 +24,18 @@ namespace UniversityCRMSAppWeb.BLL
         {
             return teacherGateway.GetTeacherDesignation();
         }
+
+        public bool IsTeacherEmailExist( string email)
+        {
+            TeacherModel isteacherEmailExist = teacherGateway.IsTecherEamilExist(email);
+            if (isteacherEmailExist != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

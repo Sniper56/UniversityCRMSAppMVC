@@ -68,5 +68,34 @@ namespace UniversityCRMSAppWeb.DAL
             con.Close();
             return designationlList;
         }
+
+        public TeacherModel IsTecherEamilExist(string email)
+        {
+            SqlConnection connection = new SqlConnection(connectinDB);
+            string query = "SELECT * FROM Teacher WHERE Email='" + email + "'";
+            SqlCommand command = new SqlCommand(query, connection);
+            TeacherModel teachers = null;
+            connection.Open();
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    teachers = new TeacherModel();
+                    teachers.TeacherId = int.Parse(reader["DepartmentId"].ToString());
+                    teachers.TacherName = reader["TeacherName"].ToString();
+                    teachers.Email = reader["Email"].ToString();
+                    teachers.Address = reader["Address"].ToString();
+                    teachers.ContactNo = reader["ContactNo"].ToString();
+                    teachers.CreditToBeTaken =Convert.ToInt32( reader["CreditToBeTaken"].ToString());
+                    teachers.DepartmentId =Convert.ToInt32( reader["DepartmentId"].ToString());
+                    teachers.DesignationId =Convert.ToInt32( reader["DesignationId"].ToString());
+
+                }
+                reader.Close();
+            }
+            connection.Close();
+            return teachers;
+        }
     }
 }

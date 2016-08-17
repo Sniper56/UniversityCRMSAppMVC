@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using UniversityCRMSAppWeb.BLL;
 using UniversityCRMSAppWeb.Models;
 
@@ -22,7 +18,16 @@ namespace UniversityCRMSAppWeb.Controllers
         [HttpPost]
         public ActionResult SaveTeacher(TeacherModel teacher)
         {
-
+            if (teacherManager.IsTeacherEmailExist(teacher.Email)==true)
+            {
+                Response.Write("Teacher email already exist!");
+            }
+            else
+            {
+                teacherManager.SaveTeacher(teacher);
+                Response.Write("Teacher save successful.");
+            }
+           
             ViewBag.Department = teacherManager.GetAllDepartment();
             ViewBag.Designation = teacherManager.GetTeacherDesignation();
             return View();
