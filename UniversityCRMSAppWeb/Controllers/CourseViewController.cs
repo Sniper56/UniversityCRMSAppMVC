@@ -15,16 +15,10 @@ namespace UniversityCRMSAppWeb.Controllers
 
         public ActionResult ViewCourse()
         {
-
-
             var departments = departmentManager.GetDepartment();
-
-
             ViewBag.Departments = departments;
-
             ViewBag.PostBack = false;
             return View();
-
         }
 
         [HttpPost]
@@ -32,14 +26,9 @@ namespace UniversityCRMSAppWeb.Controllers
         {
             var courses = courseViewManager.GetAllCoursesByDepartment(departmentId);
             ViewBag.Courses = courses;
-
-
             var departments = departmentManager.GetDepartment();
-            ViewBag.Departments = departments;
-            
+            ViewBag.Departments = departments;           
             ViewBag.PostBack = true;
-
-
             return View();
         }
 
