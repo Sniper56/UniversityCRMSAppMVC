@@ -97,5 +97,29 @@ namespace UniversityCRMSAppWeb.DAL
             connection.Close();
             return teachers;
         }
+
+        public List<TeacherModel> GetAllTeacher()
+        {
+            SqlConnection Connection = new SqlConnection(connectinDB);
+            List<TeacherModel> teachers = new List<TeacherModel>();
+            string Query = "SELECT * FROM Teacher";
+            SqlCommand cmd = new SqlCommand(Query, Connection);
+            Connection.Open();
+            SqlDataReader Reader = cmd.ExecuteReader();
+            while (Reader.Read())
+            {
+                TeacherModel teacher = new TeacherModel();
+                teacher.TeacherId = Convert.ToInt32(Reader["TeacherId"]);
+                teacher.DepartmentId = Convert.ToInt32(Reader["DepartmentId"]);
+                teacher.TacherName = Reader["TeacherName"].ToString();
+                teacher.CreditToBeTaken =Convert.ToDecimal(Reader["CreditToBeTaken"]);
+                teacher.RemainingCredit = Convert.ToDecimal(Reader["RemainingCredit"]);
+                teachers.Add(teacher);
+            }
+
+            Reader.Close();
+            Connection.Close();
+            return teachers;
+        }
     }
 }

@@ -93,5 +93,30 @@ namespace UniversityCRMSAppWeb.DAL
             connection.Close();
             return courses;
         }
+
+        public List<CourseModel> GetAllCourses()
+        {
+            SqlConnection Connection = new SqlConnection(connectinDB);
+
+            List<CourseModel> courses = new List<CourseModel>();
+            string Query = "SELECT * FROM Course";
+            SqlCommand cmd = new SqlCommand(Query, Connection);
+            Connection.Open();
+            SqlDataReader Reader = cmd.ExecuteReader();
+            while (Reader.Read())
+            {
+                CourseModel course = new CourseModel();
+                course.CourseId = Convert.ToInt32(Reader["CourseId"]);
+                course.CourseCode = Reader["CourseCode"].ToString();
+                course.CourseName = Reader["CourseName"].ToString();
+                course.Credit = Convert.ToDecimal(Reader["Credit"]);
+                course.DepartmentId = Convert.ToInt32(Reader["DepartmentId"]);
+                courses.Add(course);
+            }
+
+            Reader.Close();
+            Connection.Close();
+            return courses;
+        }
     }
 }

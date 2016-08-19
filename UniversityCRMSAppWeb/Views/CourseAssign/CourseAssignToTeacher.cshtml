@@ -4,7 +4,7 @@
 @*@model UniversityCRMSAppWeb.Models.Teacher*@
 @{
     ViewBag.Title = "CourseAssignToTeacher";
-    //Layout = "~/Views/Shared/_Layout.cshtml";
+  
     List<DepartmentModel> listOfDepartments = ViewBag.listOfDepartments;
 }
 @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "courseAssignToTeacher" }))

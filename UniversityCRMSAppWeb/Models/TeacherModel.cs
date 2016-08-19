@@ -51,6 +51,7 @@ namespace UniversityCRMSAppWeb.Models
         //}
         public int DesignationId { get; set; }
         public int DepartmentId { get; set; }
-        public int CreditToBeTaken { get; set; }
+        public decimal CreditToBeTaken { get; set; }
+        public decimal RemainingCredit { get; set; }
     }
 }

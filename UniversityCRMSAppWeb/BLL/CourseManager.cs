@@ -19,6 +19,11 @@ namespace UniversityCRMSAppWeb.BLL
             return courseGateway.GetAllDepartment();
         }
 
+        public List<CourseModel> GetAllCourses()
+        {
+            return courseGateway.GetAllCourses();
+        }
+
         public List<SemesterModel> GetAllSemester() //load semeter to semester dropdown list
         {
             return courseGateway.GetAllSemester();
