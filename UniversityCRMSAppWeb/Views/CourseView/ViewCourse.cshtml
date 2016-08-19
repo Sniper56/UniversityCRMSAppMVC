@@ -1,4 +1,4 @@
-﻿@using UniversityCRMSAppWeb.Models
+@using UniversityCRMSAppWeb.Models
 @model UniversityCRMSAppWeb.Models.CourseModel
 @{
     ViewBag.Title = "View Course Statics";
@@ -20,25 +20,25 @@
             <form method="Post" id="form">
                 <table>
                     <tr>
-                        <td><label>DepartmentName</label></td>
-                        <td>
-                            <select name="DepartmentId" id="DepartmentId">
-                                <option value="0">Select...</option>
-                                @foreach (var depts in dept)
-                                {
-                                    <option value="@depts.DepartmentId">@depts.DepartmentName</option>
-                                }
-                            </select>
-                        </td>
-
-
-                        @*<td>DepartmentName</td>
+                        @*<td><label>DepartmentName</label></td>
                             <td>
-                                @Html.DropDownListFor(model => model.DepartmentId, new SelectList(depts, "DepartmentId", "DepartmentName"), "-- Select Department--")
-                                @Html.ValidationMessageFor(m=>m.DepartmentId)
+                                <select method="Post" name="DepartmentId" id="DepartmentId">
+                                    <option value="0">Select...</option>
+                                    @foreach (var depts in dept)
+                                    {
+                                        <option value="@depts.DepartmentId">@depts.DepartmentName</option>
+                                    }
+                                </select>
                             </td>*@
 
-                        <td><input type="submit" id="Search" value="Search"></td>
+
+                        <td>DepartmentName</td>
+                        <td>
+                            @Html.DropDownListFor(model => model.DepartmentId, new SelectList(dept, "DepartmentId", "DepartmentName"), "-- Select Department--", new { onchange = "this.form.submit();" })
+                            @Html.ValidationMessageFor(m => m.DepartmentId)
+                        </td>
+
+                        @*<td><input type="submit" id="Search" value="Search"></td>*@
 
                     </tr>
 
@@ -70,30 +70,32 @@
         </fieldset>
     </div>
 
-    @*<script src="~/Scripts/jquery-3.1.0.js"></script>
-        <script src="~/Scripts/jquery.validate.js"></script>
-        <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>*@
-    @section Scripts{
-        <script>
-            $(document).ready(function () {
-                $("#DepartmentId").change(function () {
-                    @*var json = { RegNo: regNo };
+    <script src="~/Scripts/jquery-3.1.0.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#DepartmentId").change(function () {
+                var departmentId = $("#DepartmentId").val();
+                var json = { deptId: DepartmentId };
                 $.ajax({
                     type: "POST",
-                    url: '@Url.Action("GetDepartmentNameByRegNo", "ViewResult")',
+                    url: '/Course/GetCourseByDepartmentId',
                     contentType: "application/json; charset=utf-8",
                     data: JSON.stringify(json),
                     success: function (data) {
-                        var testdata = data;
-                        $("#DepartmentName").val(data.DepartmentName);
+                        $("#tablebody").empty();
+                        $.each(data, function (key, value) {
 
-
+                            $("#tablebody").append('<tr><td>' + value.CourseId + '</td><td>' + value.CourseName + '</td><td>' + value.CourseSemester + '</td><td>' + value.TeacherName + '</td></tr>');
+                        });
                     }
-                });*@
-                    $("#form").submit();
                 });
             });
-        </script>
-    }
-</body>
+
+
+        });
+    </script>
+   </body>
 </html>
