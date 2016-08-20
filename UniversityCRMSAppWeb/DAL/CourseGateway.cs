@@ -58,7 +58,7 @@ namespace UniversityCRMSAppWeb.DAL
                 while (reader.Read())
                 {
                     SemesterModel semester = new SemesterModel();
-                    semester.SemesterId = int.Parse(reader["SemesterId"].ToString());
+                    semester.Id = int.Parse(reader["SemesterId"].ToString());
                     semester.Semester = reader["SemisterName"].ToString();
                     semesterlList.Add(semester);
                 }

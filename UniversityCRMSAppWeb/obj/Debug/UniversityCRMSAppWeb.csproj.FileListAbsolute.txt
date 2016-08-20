@@ -49,3 +49,15 @@ C:\Users\Tofael\Documents\GitHub\UniversityCRMSAppMVC\UniversityCRMSAppWeb\obj\D
 C:\Users\Tofael\Documents\GitHub\UniversityCRMSAppMVC\UniversityCRMSAppWeb\obj\Debug\UniversityCRMSAppWeb.dll
 C:\Users\Tofael\Documents\GitHub\UniversityCRMSAppMVC\UniversityCRMSAppWeb\obj\Debug\UniversityCRMSAppWeb.pdb
 >>>>>>> 034963e457304d6ea4f153108482e022fbabc228
+G:\BITM\UniversityCRMSAppMVC\UniversityCRMSAppWeb\obj\Debug\UniversityCRMSAppWeb.csprojResolveAssemblyReference.cache
+G:\BITM\UniversityCRMSAppMVC\UniversityCRMSAppWeb\obj\Debug\UniversityCRMSAppWeb.dll
+G:\BITM\UniversityCRMSAppMVC\UniversityCRMSAppWeb\obj\Debug\UniversityCRMSAppWeb.pdb
+G:\BITM\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\UniversityCRMSAppWeb.dll.config
+G:\BITM\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\UniversityCRMSAppWeb.dll
+G:\BITM\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\UniversityCRMSAppWeb.pdb
+G:\BITM\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Razor.xml
+G:\BITM\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.xml
+G:\BITM\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.Deployment.xml
+G:\BITM\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.Razor.xml
+G:\BITM\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Helpers.xml
+G:\BITM\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Mvc.xml
