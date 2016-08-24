@@ -29,9 +29,7 @@ namespace UniversityCRMSAppWeb.Controllers
             return View();
         }
 
-
-
-       
+        
         public JsonResult GetNameEmailDepartmentByStudentId(int studentId)
         {
             var aStudent = courseEnrollManager.GetAllStudentDetails(studentId);
