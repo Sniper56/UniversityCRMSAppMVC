@@ -40,5 +40,17 @@ namespace UniversityCRMSAppWeb.BLL
         {
             return assingCourseViewManager.GetTakenCredit(dId, tId);
         }
+         public bool IsTeacherEmailExist( string email)
+        {
+            TeacherModel isteacherEmailExist = teacherGateway.IsTecherEamilExist(email);
+            if (isteacherEmailExist != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
