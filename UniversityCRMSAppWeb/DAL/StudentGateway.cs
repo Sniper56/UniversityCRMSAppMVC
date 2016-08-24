@@ -14,7 +14,7 @@ namespace UniversityCRMSAppWeb.DAL
         public IEnumerable<Student> GetAllStudents()
         {
             SqlConnection connection = new SqlConnection(connectinDB);
-            string Query = "SELECT * FROM Student.Register";
+            string Query = "SELECT * FROM StudentRegister";
             SqlCommand Command=new SqlCommand(Query,connection);
             List<Student> students = new List<Student>();
             connection.Open();
