@@ -12,8 +12,7 @@ namespace UniversityCRMSAppWeb.Controllers
     {
         StudentManager studentManager = new StudentManager();
         CourseEnrollManager courseEnrollManager = new CourseEnrollManager();
-        //
-        // GET: /CourseEnroll/
+        
         public ActionResult EnrollCourse()
         {
             ViewBag.listOfStudentRegNo = studentManager.GetAllStudents.ToList();

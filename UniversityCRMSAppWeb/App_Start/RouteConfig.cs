@@ -16,7 +16,7 @@ namespace UniversityCRMSAppWeb
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "CourseAssign", action = "CourseAssignToTeacher", id = UrlParameter.Optional }
+                defaults: new { controller = "CourseEnroll", action = "EnrollCourse", id = UrlParameter.Optional }
             );
         }
     }

@@ -203,6 +203,7 @@
     <Compile Include="BLL\DepartmentManager.cs" />
     <Compile Include="BLL\SemestersManager.cs" />
     <Compile Include="BLL\StudentManager.cs" />
+    <Compile Include="BLL\StudentRegisterManager.cs" />
     <Compile Include="BLL\TeacherManager.cs" />
     <Compile Include="Controllers\AllocateClassroomsController.cs" />
     <Compile Include="Controllers\CourseAssignController.cs" />
@@ -210,6 +211,7 @@
     <Compile Include="Controllers\CourseEnrollController.cs" />
     <Compile Include="Controllers\CourseViewController.cs" />
     <Compile Include="Controllers\DepartmentController.cs" />
+    <Compile Include="Controllers\StudentRegisterController.cs" />
     <Compile Include="Controllers\TeacherController.cs" />
     <Compile Include="DAL\AllocateClassroomGateway.cs" />
     <Compile Include="DAL\AssingCourseViewGateway.cs" />
@@ -221,6 +223,7 @@
     <Compile Include="DAL\DepartmentGateway.cs" />
     <Compile Include="DAL\SemestersGateway.cs" />
     <Compile Include="DAL\StudentGateway.cs" />
+    <Compile Include="DAL\StudentRegisterGateway.cs" />
     <Compile Include="DAL\TeacherGateway.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -236,6 +239,8 @@
     <Compile Include="Models\RoomModel.cs" />
     <Compile Include="Models\SemesterModel.cs" />
     <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\StudentRegisterModel.cs" />
+    <Compile Include="Models\StudentRegisterViewModel.cs" />
     <Compile Include="Models\TeacherModel.cs" />
     <Compile Include="Models\ViewCourseFromStudentDepartmentName.cs" />
     <Compile Include="Models\ViewStudentDetails.cs" />
