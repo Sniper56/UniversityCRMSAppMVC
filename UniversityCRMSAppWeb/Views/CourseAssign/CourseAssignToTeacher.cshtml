@@ -1,7 +1,8 @@
-﻿@model UniversityCRMSAppWeb.Models.DepartmentModel
+﻿@*@model UniversityCRMSAppWeb.Models.DepartmentModel*@
 @using System.Runtime.InteropServices.WindowsRuntime
 @using UniversityCRMSAppWeb.Models
-@*@model UniversityCRMSAppWeb.Models.Teacher*@
+@model UniversityCRMSAppWeb.Models.TeacherModel
+@using System.Web.UI.WebControls
 @{
     ViewBag.Title = "CourseAssignToTeacher";
   
@@ -14,12 +15,14 @@
         <legend >Course Assign To Teacher</legend>
         <div class="form-horizontal">
             <div class="form-group">
-                <div class="col-sm-2 control-label">
-                    <td>DepartmentName</td>
-                    <td>
-                        @Html.DropDownListFor(model => model.DepartmentId, new SelectList(listOfDepartments, "DepartmentId", "DepartmentName"), "-- Select Department--", new { onchange = "this.form.submit();" })
-                        @Html.ValidationMessageFor(m => m.DepartmentId)
-                    </td>
+                <div class="col-sm-10">
+                    <select name="departmentId" id="departmentId" class="form-control">
+                        <option value="">---Select---</option>
+                        @foreach (var department in listOfDepartments)
+                        {
+                            <option value="@department.DepartmentId">@department.DepartmentName</option>
+                        }
+                    </select>
                 </div>
             </div>
 
@@ -68,10 +71,10 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-2 control-label">
-                    <label for="CourseCerdit">Credit</label>
+                    <label for="Credit">Credit</label>
                 </div>
                 <div class="col-sm-10">
-                    <input type="text" name="CourseCerdit" id="CourseCerdit" class="form-control" readonly="readonly" />
+                    <input type="text" name="Credit" id="Credit" class="form-control" readonly="readonly" />
                 </div>
             </div>
 
@@ -80,7 +83,7 @@
                 <div class="col-sm-offset-2 col-sm-10">
                     <button type="submit" class="btn btn-default" id="submitButton">Assign</button>
                 </div>
-                <h3>@ViewBag.mess</h3>
+                <h3>@ViewBag.message</h3>
             </div>
         </div>
     </fieldset>
@@ -88,45 +91,49 @@
 
 @section scripts
 {
+    
+    
+    <script src="~/Scripts/jquery-3.1.0.min.js"></script>
     <script src="~/Scripts/jquery.validate.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
     <script>
         $(document).ready(function () {
             $("#departmentId").change(function () {
 
-                var departmentId = $("#departmentId").val();
+                var deptId = $("#departmentId").val();
                 $("#teacherId").empty();
                 $("#CourseId").empty();
                 $("#teacherId").append('<option value="">--Select--</option>');
                 $("#CourseId").append('<option value="">--Select--</option>');
-                var json = { deptId: departmentId };
+                var json = {
+                    departmentId: deptId
+                };
+
                 $.ajax({
                     type: "POST",
-                    url: '/CourseAssign/GetTeacherByDepartmentId',
+                    url: '@Url.Action("GetTeacherByDepartmentId", "CourseAssign")',
                     contentType: "application/json; charset=utf-8",
                     data: JSON.stringify(json),
                     success: function (data) {
                         $("#CreditToBeTaken").val('');
                         $("#RemainingCredit").val('');
-                        //alert(data);
                         $.each(data, function (key, value) {
-                            //alert(value.DepartmentId);
-                            $("#teacherId").append('<option value=' + value.Id + '>' + value.Name + '</option>');
+                           $("#teacherId").append('<option value=' + value.teacherId + '>' + value.TacherName + '</option>');
                         });
                     }
                 });
                 $.ajax({
                     type: "POST",
-                    url: '/CourseAssign/GetCourseCodeByDepartmentId',
+                    url: '@Url.Action("GetCourseCodeByDepartmentId", "CourseAssign")',
                     contentType: "application/json; charset=utf-8",
                     data: JSON.stringify(json),
                     success: function (data) {
                         $("#CourseName").val('');
-                        $("#CourseCerdit").val('');
+                        $("#Credit").val('');
                         //alert(data);
                         $.each(data, function (key, value) {
                             // alert(value.DepartmentId);
-                            $("#CourseId").append('<option value=' + value.Id + '>' + value.Code + '</option>');
+                            $("#CourseId").append('<option value=' + value.CourseId + '>' + value.CourseCode + '</option>');
                         });
                     }
                 });

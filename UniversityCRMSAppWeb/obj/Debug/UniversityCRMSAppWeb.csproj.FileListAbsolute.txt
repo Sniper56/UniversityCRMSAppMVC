@@ -61,3 +61,5 @@ G:\BITM\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.Deploy
 G:\BITM\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.Razor.xml
 G:\BITM\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Helpers.xml
 G:\BITM\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Mvc.xml
+G:\BITM\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\Newtonsoft.Json.dll
+G:\BITM\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\Newtonsoft.Json.xml

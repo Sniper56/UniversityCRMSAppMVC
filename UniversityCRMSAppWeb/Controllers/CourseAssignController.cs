@@ -21,22 +21,22 @@ namespace UniversityCRMSAppWeb.Controllers
         [HttpPost]
         public ActionResult CourseAssignToTeacher(int departmentId, int teacherId, int CourseId)
         {
-            ViewBag.mess = courseAssignManager.Save(departmentId, teacherId, CourseId);
+            ViewBag.message = courseAssignManager.Save(departmentId, teacherId, CourseId);
             ViewBag.listOfDepartments = teacherManager.GetAllDepartment();
             return View();
         }
 
 
-        public JsonResult GetTeacherByDepartmentId(int deptId)
+        public JsonResult GetTeacherByDepartmentId(int departmentId)
         {
             var teacher = teacherManager.GetAllDepartment();
-            var studentList = teacher.Where(x => x.DepartmentId == deptId).ToList();
+            var studentList = teacher.Where(x => x.DepartmentId == departmentId).ToList();
             return Json(studentList, JsonRequestBehavior.AllowGet);
         }
-        public JsonResult GetCourseCodeByDepartmentId(int deptId)
+        public JsonResult GetCourseCodeByDepartmentId(int departmentId)
         {
             var courses = teacherManager.GetAllCourses();
-            var studentList = courses.Where(x => x.DepartmentId == deptId).ToList();
+            var studentList = courses.Where(x => x.DepartmentId == departmentId).ToList();
             return Json(studentList, JsonRequestBehavior.AllowGet);
         }
         public JsonResult GetCourseNameAndCreditByCourseId(int courseId)

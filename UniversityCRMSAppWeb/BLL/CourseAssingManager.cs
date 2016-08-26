@@ -22,10 +22,10 @@ namespace UniversityCRMSAppWeb.BLL
                     }
                     else
                     {
-                        return "Sory! Save Fail";
+                        return "Sory! Save Failed";
                     }
                 }
-                return "Course Alrady Assing";
+                return "Course Already Assing";
             }
             return "Overlape Course";
 

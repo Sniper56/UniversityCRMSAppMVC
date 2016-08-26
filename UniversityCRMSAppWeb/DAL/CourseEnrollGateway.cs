@@ -11,9 +11,10 @@ namespace UniversityCRMSAppWeb.DAL
     public class CourseEnrollGateway
     {
         string connectionString = WebConfigurationManager.ConnectionStrings["UniversityCRMS"].ConnectionString;
-        SqlConnection connection = new SqlConnection();
+        
         public List<ViewStudentDetails> GetAllStudentDetails(int studentId)
         {
+            SqlConnection connection = new SqlConnection(connectionString);
             List<ViewStudentDetails> viewStudentDetailses = new List<ViewStudentDetails>();
             string Query = "SELECT * FROM ViewStudentDetails where StudentId='" + studentId + "'";
             SqlCommand cmd = new SqlCommand(Query, connection);
@@ -37,6 +38,7 @@ namespace UniversityCRMSAppWeb.DAL
 
         public List<ViewCourseFromStudentDepartmentName> GetAllCourseFromStudentDepartmentNames(int studentId)
         {
+            SqlConnection connection = new SqlConnection(connectionString);
             List<ViewCourseFromStudentDepartmentName> viewCourseFromStudentDepartment = new List<ViewCourseFromStudentDepartmentName>();
             string Query = "SELECT * FROM ViewCourseFromStudentDepartmentMenu where StudentId='" + studentId + "'";
             SqlCommand Command = new SqlCommand(Query, connection);
@@ -60,7 +62,8 @@ namespace UniversityCRMSAppWeb.DAL
 
         public int EnrollCourse(CourseEnroll courseEnroll)
         {
-            string Query = "INSERT INTO EnrollCourse VALUES('" + courseEnroll.StudentId + "','" + courseEnroll.CourseId + "','" + courseEnroll.EnrollDate + "')";
+            SqlConnection connection = new SqlConnection(connectionString);
+            string Query = "INSERT INTO EnrollInACourse(StudentId,CourseId,Date) VALUES('" + courseEnroll.StudentId + "','" + courseEnroll.CourseId + "','" + courseEnroll.EnrollDate + "')";
             SqlCommand Command=new SqlCommand(Query,connection);
             connection.Open();
             int rowAffected = Command.ExecuteNonQuery();
@@ -71,7 +74,8 @@ namespace UniversityCRMSAppWeb.DAL
 
         public string FindSameCourseForAStudent(CourseEnroll courseEnroll)
         {
-            string Query = "SELECT * FROM EnrollCourse WHERE StudentId='" + courseEnroll.StudentId + "' AND CourseId='" + courseEnroll.CourseId + "'";
+            SqlConnection connection = new SqlConnection(connectionString);
+            string Query = "SELECT * FROM EnrollInACourse WHERE StudentId='" + courseEnroll.StudentId + "' AND CourseId='" + courseEnroll.CourseId + "'";
             SqlCommand Command=new SqlCommand(Query,connection);
             string message = null;
             connection.Open();
