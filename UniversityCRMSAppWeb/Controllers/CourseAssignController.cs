@@ -29,7 +29,7 @@ namespace UniversityCRMSAppWeb.Controllers
 
         public JsonResult GetTeacherByDepartmentId(int departmentId)
         {
-            var teacher = teacherManager.GetAllDepartment();
+            var teacher = teacherManager.GetAllTeachers();
             var studentList = teacher.Where(x => x.DepartmentId == departmentId).ToList();
             return Json(studentList, JsonRequestBehavior.AllowGet);
         }
@@ -39,16 +39,12 @@ namespace UniversityCRMSAppWeb.Controllers
             var studentList = courses.Where(x => x.DepartmentId == departmentId).ToList();
             return Json(studentList, JsonRequestBehavior.AllowGet);
         }
-        public JsonResult GetCourseNameAndCreditByCourseId(int courseId)
+
+        public JsonResult GetTeacherCreditByTeacherId(int Tid)
         {
-            var teacher = teacherManager.GetAllCourses();
-            var studentList = teacher.Where(x => x.CourseId == courseId).ToList();
-            return Json(studentList, JsonRequestBehavior.AllowGet);
-        }
-        public JsonResult GetTeacherCreditByTeacherId(int teacherId)
-        {
-            var teacher = teacherManager.GetAllTeachers();
-            var studentList = teacher.Where(x => x.TeacherId == teacherId).ToList();
+            TeacherManager ateacherManager = new TeacherManager();
+            var teacher = ateacherManager.GetAllTeachers();
+            var studentList = teacher.FirstOrDefault(x => x.TeacherId == Tid);
             return Json(studentList, JsonRequestBehavior.AllowGet);
         }
         public JsonResult GetTeacherTakenCreditByDepartmentIdAndTeacherId(int deptId, int teacherId)
@@ -56,7 +52,12 @@ namespace UniversityCRMSAppWeb.Controllers
             var remainingCredit = teacherManager.GetTakenCredit(deptId, teacherId);
             return Json(remainingCredit, JsonRequestBehavior.AllowGet);
         }
-	
+        public JsonResult GetCourseNameAndCreditByCourseId(int courseId)
+        {
+            var teacher = teacherManager.GetAllCourses();
+            var studentList = teacher.Where(x => x.CourseId == courseId).ToList();
+            return Json(studentList, JsonRequestBehavior.AllowGet);
+        }
     }
 
 }
