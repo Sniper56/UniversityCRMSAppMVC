@@ -15,49 +15,49 @@
     <title>AssignToTeacher</title>
 </head>
 <body>
-    <div align="center" style="margin-top: 5%">
+    <div align="center">
         @using (Html.BeginForm())
         {
-            <table width="50%" align="center" style="margin-top: 100px">
+            <table>
                 <tr>
                     <td>
                         <fieldset>
                             <legend>
-                                @Html.Label("Course Assign To Teacher", new { @style = "font-size:x-large;font-weight: bold" })
+                                @Html.Label("Course Assign To Teacher", new { @style = "font-size:x-large;" })
                             </legend>
-                            <table style="margin-top: 30px">
+                            <table>
                                 <tr>
-                                    <td>@Html.Label("Department", new { @style = "font-size:large;font-weight: bold" })</td>
+                                    <td>@Html.Label("Department", new { @style = "font-size:large;" })</td>
                                     <td>
                                         @Html.DropDownListFor(d => d.DepartmentId, new SelectList(listOfDepartments, "DepartmentId", "DepartmentName"), "-----Select Department-----", new { @style = "width: 173px", id = "departmentId" })
                                     </td>
                                 </tr>
                                 <tr>
 
-                                    <td>@Html.Label("Teacher", new { @style = "font-size:large;font-weight: bold" })</td>
+                                    <td>@Html.Label("Teacher", new { @style = "font-size:large;" })</td>
                                     <td>
                                         @Html.DropDownListFor(d => d.TeacherId, new SelectList(string.Empty, "TeacherId", "TacherName"), new { @style = "width: 173px", id = "teacherid" })
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>@Html.Label("CreditToBeTaken", new { @style = "font-size:large;font-weight: bold" })</td>
+                                    <td>@Html.Label("CreditToBeTaken", new { @style = "font-size:large;" })</td>
                                     <td>@Html.TextBoxFor(m => m.CreditToBeTaken, new { id = "credittobetaken", @readonly = true })</td>
 
                                 </tr>
                                 <tr>
-                                    <td>@Html.Label("RemainingCredit", new { @style = "font-size:large;font-weight: bold" })</td>
+                                    <td>@Html.Label("RemainingCredit", new { @style = "font-size:large;" })</td>
                                     <td>@Html.TextBoxFor(r => r.RemainingCredit, new { id = "remainingcredit", @readonly = true })</td>
                                 </tr>
                                 <tr>
-                                    <td>@Html.Label("CourseCode", new { @style = "font-size:large;font-weight: bold" })</td>
+                                    <td>@Html.Label("CourseCode", new { @style = "font-size:large;" })</td>
                                     <td>@Html.DropDownListFor(c => c.CourseId, new SelectList(string.Empty, "CourseId", "CourseCode"), new { @style = "width: 173px", id = "courseid" })</td>
                                 </tr>
                                 <tr>
-                                    <td>@Html.Label("Name", new { @style = "font-size:large;font-weight: bold" })</td>
+                                    <td>@Html.Label("Name", new { @style = "font-size:large;" })</td>
                                     <td>@Html.TextBoxFor(a => a.CourseName, new { id = "coursename", @readonly = true })</td>
                                 </tr>
                                 <tr>
-                                    <td>@Html.Label("Credit", new { @style = "font-size:large;font-weight: bold" })</td>
+                                    <td>@Html.Label("Credit", new { @style = "font-size:large;" })</td>
                                     <td>@Html.TextBoxFor(a => a.CourseCredit, new { id = "credit", @readonly = true })</td>
                                 </tr>
                                 <tr>
@@ -75,92 +75,7 @@
             </table>
         }
     </div>
-
-
-
-    @*@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "courseAssignToTeacher" }))
-        {
-
-            <fieldset>
-                <legend >Course Assign To Teacher</legend>
-                <div class="form-horizontal">
-                    <div class="form-group">
-                        <div class="col-sm-10">
-                            <select name="departmentId" id="departmentId" class="form-control">
-                                <option value="">---Select---</option>
-                                @foreach (var department in listOfDepartments)
-                                {
-                                    <option value="@department.DepartmentId">@department.DepartmentName</option>
-                                }
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-sm-2 control-label">
-                            <label for="teacherId">Teacher</label>
-                        </div>
-                        <div class="col-sm-10">
-                            <select name="teacherId" id="teacherId" class="form-control"></select>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-sm-2 control-label">
-                            <label for="CreditToBeTaken">Credit to be taken</label>
-                        </div>
-                        <div class="col-sm-10">
-                            <input type="text" name="CreditToBeTaken" id="CreditToBeTaken" class="form-control" readonly="readonly" />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-2 control-label">
-                            <label for="RemainingCredit">Remaining credit</label>
-                        </div>
-                        <div class="col-sm-10">
-                            <input type="text" name="RemainingCredit" id="RemainingCredit" class="form-control" readonly="readonly" />
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-sm-2 control-label">
-                            <label for="CourseId">Course code</label>
-                        </div>
-                        <div class="col-sm-10">
-                            <select name="CourseId" id="CourseId" class="form-control"></select>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-sm-2 control-label">
-                            <label for="CourseName">Name</label>
-                        </div>
-                        <div class="col-sm-10">
-                            <input type="text" name="CourseName" id="CourseName" class="form-control" readonly="readonly" />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-2 control-label">
-                            <label for="Credit">Credit</label>
-                        </div>
-                        <div class="col-sm-10">
-                            <input type="text" name="Credit" id="Credit" class="form-control" readonly="readonly" />
-                        </div>
-                    </div>
-
-
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-default" id="submitButton">Assign</button>
-                        </div>
-                        <h3>@ViewBag.message</h3>
-                    </div>
-                </div>
-            </fieldset>
-        }*@
-
-
-
+    
     <script src="~/Scripts/jquery-3.1.0.min.js"></script>
     <script src="~/Scripts/jquery.validate.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
@@ -174,7 +89,7 @@
                         var deptId = $("#departmentId").val();
                         $("#teacherid").empty();
                         $("#courseid").empty();
-                        $("#teacherId").append('<option value="">--Select--</option>');
+                        $("#teacherid").append('<option value="">--Select--</option>');
 
                         var json = {
                             departmentId: deptId
@@ -227,14 +142,18 @@
                 $("#courseid")
                     .change(function () {
 
-                        var crid = $("#courseid").val();
-                        var json = { courseId: crid };
+                        var courseid = $("#courseid").val();
+                        var json = {
+                             courseId: courseid
+                        };
                         $.ajax({
                             type: "POST",
                             url: '@Url.Action("GetCourseNameAndCreditByCourseId", "CourseAssign")',
                             contentType: "application/json; charset=utf-8",
                             data: JSON.stringify(json),
-                            success: function (data) { $("#coursename").val(data.CourseName); $("#credit").val(data.Credit); }
+                            success: function(data) {
+                                $("#coursename").val(data.CourseName); $("#credit").val(data.Credit);
+                            }
                         });
                     });
             });

@@ -112,7 +112,7 @@ namespace UniversityCRMSAppWeb.DAL
                 teacher.TeacherId = Convert.ToInt32(Reader["TeacherId"]);
                 teacher.DepartmentId = Convert.ToInt32(Reader["DepartmentId"]);
                 teacher.TacherName = Reader["TeacherName"].ToString();
-                teacher.CreditToBeTaken =Convert.ToDecimal(Reader["CreditToBeTaken"]);
+                teacher.CreditToBeTaken = Convert.ToDecimal(Reader["TakenCredit"]);
                 teacher.RemainingCredit = Convert.ToDecimal(Reader["RemainingCredit"]);
                 teachers.Add(teacher);
             }
