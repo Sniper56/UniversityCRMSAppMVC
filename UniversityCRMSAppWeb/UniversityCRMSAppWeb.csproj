@@ -219,6 +219,8 @@
     <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\StudentRegisterController.cs" />
     <Compile Include="Controllers\TeacherController.cs" />
+    <Compile Include="Controllers\UnassignRoomController.cs" />
+    <Compile Include="Controllers\UnAssingTeacherController.cs" />
     <Compile Include="DAL\AllocateClassroomGateway.cs" />
     <Compile Include="DAL\AssingCourseViewGateway.cs" />
     <Compile Include="DAL\CourseAssignGateway.cs" />
@@ -266,6 +268,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\CourseAssign\CourseAssignToTeacher.cshtml" />
     <Content Include="Views\CourseEnroll\EnrollCourse.cshtml" />
+    <Content Include="Views\UnassignRoom\UnAssinClassRoom.cshtml" />
+    <Content Include="Views\UnAssingTeacher\UnAssignTeachers.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
