@@ -32,7 +32,7 @@ namespace UniversityCRMSAppWeb.Controllers
         public JsonResult GetNameEmailDepartmentByStudentId(int studentId)
         {
             var aStudent = courseEnrollManager.GetAllStudentDetails(studentId);
-            var studentList = aStudent.Where(student => student.Id == studentId).ToList();
+            var studentList = aStudent.FirstOrDefault(student => student.Id == studentId);
             return Json(studentList, JsonRequestBehavior.AllowGet);
         }
 

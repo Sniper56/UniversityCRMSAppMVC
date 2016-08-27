@@ -209,6 +209,8 @@
     <Compile Include="BLL\StudentManager.cs" />
     <Compile Include="BLL\StudentRegisterManager.cs" />
     <Compile Include="BLL\TeacherManager.cs" />
+    <Compile Include="BLL\UnAssignClassManager.cs" />
+    <Compile Include="BLL\UnassignTeacherManager.cs" />
     <Compile Include="Controllers\AllocateClassroomsController.cs" />
     <Compile Include="Controllers\CourseAssignController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
@@ -229,6 +231,8 @@
     <Compile Include="DAL\StudentGateway.cs" />
     <Compile Include="DAL\StudentRegisterGateway.cs" />
     <Compile Include="DAL\TeacherGateway.cs" />
+    <Compile Include="DAL\UnAssignClassGateway.cs" />
+    <Compile Include="DAL\UnAssignTeacherGateway.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

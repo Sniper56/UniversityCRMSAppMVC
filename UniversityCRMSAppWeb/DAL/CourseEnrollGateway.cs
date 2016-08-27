@@ -16,17 +16,17 @@ namespace UniversityCRMSAppWeb.DAL
         {
             SqlConnection connection = new SqlConnection(connectionString);
             List<ViewStudentDetails> viewStudentDetailses = new List<ViewStudentDetails>();
-            string Query = "SELECT * FROM ViewStudentDetails where StudentId='" + studentId + "'";
+            string Query = "SELECT * FROM ViewStudentDetail where ID='" + studentId + "'";
             SqlCommand cmd = new SqlCommand(Query, connection);
             connection.Open();
             SqlDataReader Reader = cmd.ExecuteReader();
             while (Reader.Read())
             {
                 ViewStudentDetails aViewStudentDetails = new ViewStudentDetails();
-                aViewStudentDetails.Id = Convert.ToInt32(Reader["StudentId"]);
+                aViewStudentDetails.Id = Convert.ToInt32(Reader["ID"]);
                 aViewStudentDetails.Name = Reader["StudentName"].ToString();
-                aViewStudentDetails.Email = Reader["StudentEmail"].ToString();
-                aViewStudentDetails.RegNo = Reader["StudentRegNo"].ToString();
+                aViewStudentDetails.Email = Reader["Email"].ToString();
+                //aViewStudentDetails.RegNo = Reader["StudentReqId"].ToString();
                 viewStudentDetailses.Add(aViewStudentDetails);
             }
 
@@ -36,11 +36,11 @@ namespace UniversityCRMSAppWeb.DAL
         }
 
 
-        public List<ViewCourseFromStudentDepartmentName> GetAllCourseFromStudentDepartmentNames(int studentId)
+         public List<ViewCourseFromStudentDepartmentName> GetAllCourseFromStudentDepartmentNames(int studentId)
         {
             SqlConnection connection = new SqlConnection(connectionString);
             List<ViewCourseFromStudentDepartmentName> viewCourseFromStudentDepartment = new List<ViewCourseFromStudentDepartmentName>();
-            string Query = "SELECT * FROM ViewCourseFromStudentDepartmentMenu where StudentId='" + studentId + "'";
+            string Query = "SELECT * FROM ViewCourseFromStudentDepartmentName where StudentId='" + studentId + "'";
             SqlCommand Command = new SqlCommand(Query, connection);
             connection.Open();
             SqlDataReader Reader = Command.ExecuteReader();
