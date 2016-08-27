@@ -24,8 +24,9 @@ namespace UniversityCRMSAppWeb.DAL
             {
                 ViewStudentDetails aViewStudentDetails = new ViewStudentDetails();
                 aViewStudentDetails.Id = Convert.ToInt32(Reader["ID"]);
-                aViewStudentDetails.Name = Reader["StudentName"].ToString();
+                aViewStudentDetails.StudentName = Reader["StudentName"].ToString();
                 aViewStudentDetails.Email = Reader["Email"].ToString();
+                aViewStudentDetails.Name = Reader["Name"].ToString();
                 //aViewStudentDetails.RegNo = Reader["StudentReqId"].ToString();
                 viewStudentDetailses.Add(aViewStudentDetails);
             }
