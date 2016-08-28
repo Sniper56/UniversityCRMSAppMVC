@@ -13,7 +13,7 @@ namespace UniversityCRMSAppWeb.DAL
         public int Save(int d, int t, int c)
         {
             SqlConnection con = new SqlConnection(connectinDB);
-            string query = "INSERT INTO CourseAssign(DepartmentId,TeacherId,CourseId) VALUES('" + d + "','" + t + "'," + c + ")";
+            string query = "INSERT INTO CourseAssign(DepartmentId,TeacherId,CourseId,Status) VALUES('" + d + "','" + t + "'," + c + ",'True')";
             SqlCommand cmd = new SqlCommand(query, con);
             //Command.CommandText = Query;
             con.Open();

@@ -64,7 +64,7 @@ namespace UniversityCRMSAppWeb.DAL
         public int EnrollCourse(CourseEnroll courseEnroll)
         {
             SqlConnection connection = new SqlConnection(connectionString);
-            string Query = "INSERT INTO EnrollInACourse(StudentId,CourseId,Date) VALUES('" + courseEnroll.StudentId + "','" + courseEnroll.CourseId + "','" + courseEnroll.EnrollDate + "')";
+            string Query = "INSERT INTO EnrollInACourse(StudentId,CourseId,Date,Status) VALUES('" + courseEnroll.StudentId + "','" + courseEnroll.CourseId + "','" + courseEnroll.EnrollDate + "','True')";
             SqlCommand Command=new SqlCommand(Query,connection);
             connection.Open();
             int rowAffected = Command.ExecuteNonQuery();
