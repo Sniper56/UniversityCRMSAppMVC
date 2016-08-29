@@ -13,7 +13,7 @@ namespace UniversityCRMSAppWeb.DAL
         public void UnassignClassRoom()
         {
             SqlConnection con = new SqlConnection(connectinDB);
-            string query = "UPDATE AllocateRoom SET RoomStatus=0 WHERE RoomStatus=1";
+            string query = "UPDATE AllocateRoom SET RoomStatus='False' WHERE RoomStatus='True'";
             SqlCommand cmd = new SqlCommand(query, con);
             con.Open();
             cmd.ExecuteNonQuery();

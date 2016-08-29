@@ -14,7 +14,7 @@ namespace UniversityCRMSAppWeb.DAL
         public void UnassignTeacher()
         {
             SqlConnection con = new SqlConnection(connectinDB);
-            string query = "UPDATE CourseAssignToTeacher SET CourseAssignStatus=0 WHERE CourseAssignStatus=1";
+            string query = "UPDATE CourseAssignToTeacher SET CourseAssignStatus='False' WHERE CourseAssignStatus='True'";
             SqlCommand cmd = new SqlCommand(query, con);
             con.Open();
             cmd.ExecuteNonQuery();
