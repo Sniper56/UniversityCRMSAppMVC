@@ -19,10 +19,14 @@ namespace UniversityCRMSAppWeb.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult CourseAssignToTeacher(int departmentId, int teacherId, int CourseId)
+        public ActionResult CourseAssignToTeacher(int departmentId, int teacherId, int CourseId, int RemainCredit)
         {
             ViewBag.message = courseAssignManager.Save(departmentId, teacherId, CourseId);
             ViewBag.listOfDepartments = teacherManager.GetAllDepartment();
+            if (ViewBag.message != "Save Successfully")
+            {
+                ViewBag.Message2 = teacherManager.UpdateRemainingCredit(teacherId, RemainCredit);
+            }
             return View();
         }
 

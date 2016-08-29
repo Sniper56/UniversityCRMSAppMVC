@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -96,6 +97,26 @@ namespace UniversityCRMSAppWeb.DAL
             }
             connection.Close();
             return teachers;
+        }
+
+        public int UpdateRemainingCredit(int teacherId, int remainCredit)
+        {
+            SqlConnection connection = new SqlConnection(connectinDB);
+
+            string query = "UPDATE Teacher SET RemainingCredit=@remainCredit WHERE TeacherId=@Id;";
+            SqlCommand command = new SqlCommand(query, connection);
+            connection.Open();
+            int rowAffected = command.ExecuteNonQuery();
+            connection.Close();
+            return rowAffected;
+
+            //command.Parameters.Clear();
+            //command.Parameters.Add("remainCredit", SqlDbType.Int);
+            //command.Parameters["remainCredit"].Value = remainCredit;
+            //command.Parameters.Add("Id", SqlDbType.Int);
+            //command.Parameters["Id"].Value = teacherId;
+
+            
         }
 
         public List<TeacherModel> GetAllTeacher()
