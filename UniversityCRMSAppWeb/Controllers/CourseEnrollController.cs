@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -31,9 +31,8 @@ namespace UniversityCRMSAppWeb.Controllers
         
         public JsonResult GetNameEmailDepartmentByStudentId(int studentId)
         {
-            var aStudent = courseEnrollManager.GetAllStudentDetails(studentId);
-            var studentList = aStudent.FirstOrDefault(student => student.Id == studentId);
-            return Json(studentList, JsonRequestBehavior.AllowGet);
+            var student = studentManager.GetAllStudentByStudentId(studentId);
+            return Json(student, JsonRequestBehavior.AllowGet);
         }
 
         public JsonResult GetAllCourseByStudentDepartmentID(int studentId)
@@ -42,5 +41,7 @@ namespace UniversityCRMSAppWeb.Controllers
             var courseList = courses.Where(x => x.StudentId == studentId).ToList();
             return Json(courseList, JsonRequestBehavior.AllowGet);
         }
+
+        
 	}
 }
