@@ -16,7 +16,7 @@ namespace UniversityCRMSAppWeb.Models
         public string CourseCode { get; set; }
         public decimal CourseCredit { get; set; }
         public string CourseSemester { get; set; }
-        public decimal CreditToBeTaken { get; set; }
-        public decimal RemainingCredit { get; set; }
+        public int CreditToBeTaken { get; set; }
+        public int RemainingCredit { get; set; }
     }
 }

@@ -152,39 +152,18 @@
                         url: '@Url.Action("GetCourseNameAndCreditByCourseId", "CourseAssign")',
                         contentType: "application/json; charset=utf-8",
                         data: JSON.stringify(json),
-                        success: function (studentList) {
-                            var courseName = studentList.CourseName;
-                            var credit = studentList.Credit;
+                        success: function (teacher) {
+                            var courseName = teacher.CourseName;
+                            var credit = teacher.Credit;
                             $("#CourseName").val(courseName);
                             $("#CourseCredit").val(credit);
 
-                            var remainCredit = $("#remainingcredit").val();
-                            var creditminus = $("#CourseCredit").val();
-                            var finalcredit = remainCredit - creditminus;
-                            if (finalcredit < 0) {
-                                $("#dialog-confirm").dialog({
-                                    resizable: false,
-                                    height: 140,
-                                    modal: true,
-                                    buttons: {
-                                        "Yes(Add Course)": function () {
-                                            $(this).dialog("close");
-                                        },
-                                        "NO(Dont Add Course)": function () {
-
-                                            $(":submit").attr("disabled", true);
-                                            $(this).dialog("close");
-                                        }
-                                    }
-                                });
-                            }
-
-                            $("#remainingcredit").val(finalcredit);
-
+                       
                         }
                     });
                 });
             });
-    </script>
+
+      </script>
 </body>
 </html>

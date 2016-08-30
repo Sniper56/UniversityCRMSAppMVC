@@ -31,6 +31,11 @@ namespace UniversityCRMSAppWeb.BLL
         {
             return courseGateway.GetAllCourses();
         }
+        public CourseModel GetCourseNameAndCreditByCourseId(int courseId)
+        {
+            return courseGateway.GetCourseNameAndCreditByCourseId(courseId);
+        }
+
         public List<TeacherModel> GetAllTeachers()
         {
             return teacherGateway.GetAllTeacher();

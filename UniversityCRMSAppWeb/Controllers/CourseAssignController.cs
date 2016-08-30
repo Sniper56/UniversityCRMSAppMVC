@@ -19,15 +19,15 @@ namespace UniversityCRMSAppWeb.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult CourseAssignToTeacher(int departmentId, int teacherId, int CourseId, int RemainCredit)
+        public ActionResult CourseAssignToTeacher(int departmentId, int teacherId, int CourseId)
         {
-            ViewBag.message = courseAssignManager.Save(departmentId, teacherId, CourseId);
-            ViewBag.listOfDepartments = teacherManager.GetAllDepartment();
-            if (ViewBag.message != "Save Successfully")
-            {
-                ViewBag.Message2 = teacherManager.UpdateRemainingCredit(teacherId, RemainCredit);
-            }
-            return View();
+            
+                ViewBag.message = courseAssignManager.Save(departmentId, teacherId, CourseId);
+                ViewBag.listOfDepartments = teacherManager.GetAllDepartment();
+                
+                return View();
+           
+           
         }
 
 
@@ -58,9 +58,9 @@ namespace UniversityCRMSAppWeb.Controllers
         }
         public JsonResult GetCourseNameAndCreditByCourseId(int courseId)
         {
-            var teacher = teacherManager.GetAllCourses();
-            var studentList = teacher.Where(x => x.CourseId == courseId).ToList();
-            return Json(studentList, JsonRequestBehavior.AllowGet);
+            var teacher = teacherManager.GetCourseNameAndCreditByCourseId(courseId);
+            //var studentList = teacher.Where(x => x.CourseId == courseId).ToList();
+            return Json(teacher, JsonRequestBehavior.AllowGet);
         }
     }
 

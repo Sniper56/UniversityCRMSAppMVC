@@ -18,12 +18,12 @@ namespace UniversityCRMSAppWeb.DAL
             decimal takenCredit = 0;
             string Query = "SELECT * FROM CourseAssigneView WHERE DepartmentId=" + dId + " AND TeacherId=" + tId + "";
             SqlCommand Command = new SqlCommand(Query, Connection);
-            //Command.CommandText = Query;
+            
             Connection.Open();
             SqlDataReader Reader = Command.ExecuteReader();
             while (Reader.Read())
             {
-                takenCredit += Convert.ToDecimal(Reader["CourseCerdit"]);
+                takenCredit += Convert.ToDecimal(Reader["Credit"]);
             }
             Connection.Close();
             Reader.Close();

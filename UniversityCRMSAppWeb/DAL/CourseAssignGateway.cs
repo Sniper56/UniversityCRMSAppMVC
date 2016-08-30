@@ -13,9 +13,8 @@ namespace UniversityCRMSAppWeb.DAL
         public int Save(int d, int t, int c)
         {
             SqlConnection con = new SqlConnection(connectinDB);
-            string query = "INSERT INTO CourseAssign(DepartmentId,TeacherId,CourseId,Status) VALUES('" + d + "','" + t + "'," + c + ",'True')";
+            string query = "INSERT INTO CourseAssignToTeacher(DepartmentId,TeacherId,CourseId,CourseAssignStatus) VALUES('" + d + "','" + t + "'," + c + ",'True')";
             SqlCommand cmd = new SqlCommand(query, con);
-            //Command.CommandText = Query;
             con.Open();
             int rowAffected = cmd.ExecuteNonQuery();
             con.Close();
@@ -25,12 +24,11 @@ namespace UniversityCRMSAppWeb.DAL
         public bool OverlapCourse(int tid, int cid)
         {
             SqlConnection Connection = new SqlConnection(connectinDB);
-            string query = "SELECT * FROM CourseAssign WHERE TeacherId=" + tid + " AND CourseId=" + cid + "";
+            string query = "SELECT * FROM CourseAssignToTeacher WHERE TeacherId=" + tid + " AND CourseId=" + cid + "";
             //Command.CommandText = Query;
             SqlCommand cmd = new SqlCommand(query, Connection);
-            SqlDataReader Reader =cmd.ExecuteReader();
             Connection.Open();
-            Reader = cmd.ExecuteReader();
+            SqlDataReader Reader = cmd.ExecuteReader();
             if (Reader.HasRows)
             {
                 return true;
@@ -43,13 +41,10 @@ namespace UniversityCRMSAppWeb.DAL
         public bool AssignCourse(int cid)
         {
             SqlConnection Connection = new SqlConnection(connectinDB);
-            string query = "SELECT * FROM CourseAssign WHERE CourseId =" + cid + "";
+            string query = "SELECT * FROM CourseAssignToTeacher WHERE CourseId =" + cid + "";
             SqlCommand Command = new SqlCommand(query, Connection);
-            //Command.CommandText = Query;
+           Connection.Open();
             SqlDataReader Reader = Command.ExecuteReader();
-
-            Connection.Open();
-            Reader = Command.ExecuteReader();
             if (Reader.HasRows)
             {
                 return true;

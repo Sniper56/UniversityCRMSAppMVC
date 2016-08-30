@@ -54,15 +54,24 @@
 
                     <tr>Course Information</tr>
                     <tr><th bgcolor="#e0e0d1">Code</th><th bgcolor="#e0e0d1">Name/Title</th><th bgcolor="#e0e0d1">Semester</th><th bgcolor="#e0e0d1">Assigned To</th></tr>
-                    foreach (var items in courses)
-                    {
-                        <tr>
-                            <td>@items.Code</td>
-                            <td>@items.Name</td>
-                            <td>@items.SemesterName</td>
-                            <td>@items.TeacherName</td>
-                        </tr>
-                    }
+                   
+                    if(courses == null)
+                     {
+                        return;
+                     }
+                     else
+                     {
+
+                         foreach (var items in courses)
+                         {
+                             <tr>
+                                 <td>@items.Code</td>
+                                 <td>@items.Name</td>
+                                 <td>@items.SemesterName</td>
+                                 <td>@items.TeacherName</td>
+                             </tr>
+                         }
+                     }
 
                 }
 
@@ -73,7 +82,7 @@
     <script src="~/Scripts/jquery-3.1.0.js"></script>
     <script src="~/Scripts/jquery.validate.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
-    <script>
+    @*<script>
         $(document).ready(function () {
 
             $("#DepartmentId").change(function () {
@@ -96,6 +105,6 @@
 
 
         });
-    </script>
+    </script>*@
    </body>
 </html>

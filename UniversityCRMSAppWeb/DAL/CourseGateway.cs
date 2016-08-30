@@ -118,5 +118,32 @@ namespace UniversityCRMSAppWeb.DAL
             Connection.Close();
             return courses;
         }
+
+
+
+        public CourseModel GetCourseNameAndCreditByCourseId(int courseId)
+        {
+            SqlConnection Connection = new SqlConnection(connectinDB);
+
+            CourseModel course = new CourseModel();
+            string Query = "SELECT * FROM Course WHERE CourseId='" + courseId + "'";
+            SqlCommand cmd = new SqlCommand(Query, Connection);
+            Connection.Open();
+            SqlDataReader Reader = cmd.ExecuteReader();
+            while (Reader.Read())
+            {
+                
+                course.CourseId = Convert.ToInt32(Reader["CourseId"]);
+                course.CourseCode = Reader["CourseCode"].ToString();
+                course.CourseName = Reader["CourseName"].ToString();
+                course.Credit = Convert.ToDecimal(Reader["Credit"]);
+                course.DepartmentId = Convert.ToInt32(Reader["DepartmentId"]);
+               
+            }
+
+            Reader.Close();
+            Connection.Close();
+            return course;
+        }
     }
 }

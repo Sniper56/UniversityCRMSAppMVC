@@ -22,7 +22,7 @@ namespace UniversityCRMSAppWeb.BLL
                     }
                     else
                     {
-                        return "Sory! Save Failed";
+                        return "Sorry! Save Failed";
                     }
                 }
                 return "Course Already Assing";
