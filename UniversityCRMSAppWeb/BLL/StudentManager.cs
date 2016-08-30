@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,6 +13,11 @@ namespace UniversityCRMSAppWeb.BLL
         public IEnumerable<Student> GetAllStudents
         {
             get { return studentGateway.GetAllStudents(); }
+        }
+
+
+        public ViewStudentDetails GetAllStudentByStudentId(int id) {
+            return studentGateway.GetAllStudentsByStudentId(id);
         }
     }
 
