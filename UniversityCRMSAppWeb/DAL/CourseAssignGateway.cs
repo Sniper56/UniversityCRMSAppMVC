@@ -1,63 +1,67 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
-using System.Web.Configuration;
+using System.Web.Mvc;
+using UniversityCRMSAppWeb.BLL;
 
-namespace UniversityCRMSAppWeb.DAL
+namespace UniversityCRMSAppWeb.Controllers
 {
-    public class CourseAssignGateway
+    public class CourseAssignController : Controller
     {
-        string connectinDB = WebConfigurationManager.ConnectionStrings["UniversityCRMS"].ConnectionString;
-        public int Save(int d, int t, int c)
+        TeacherManager teacherManager = new TeacherManager();
+        CourseAssingManager courseAssignManager = new CourseAssingManager();
+        //
+        // GET: /CourseAssign/
+        public ActionResult CourseAssignToTeacher()
         {
-            SqlConnection con = new SqlConnection(connectinDB);
-            string query = "INSERT INTO CourseAssign(DepartmentId,TeacherId,CourseId,Status) VALUES('" + d + "','" + t + "'," + c + ",'True')";
-            SqlCommand cmd = new SqlCommand(query, con);
-            //Command.CommandText = Query;
-            con.Open();
-            int rowAffected = cmd.ExecuteNonQuery();
-            con.Close();
-            return rowAffected;
+            ViewBag.listOfDepartments = teacherManager.GetAllDepartment();
+            return View();
+        }
+        [HttpPost]
+        public ActionResult CourseAssignToTeacher(int departmentId, int teacherId, int CourseId, int RemainCredit)
+        {
+            ViewBag.message = courseAssignManager.Save(departmentId, teacherId, CourseId);
+            ViewBag.listOfDepartments = teacherManager.GetAllDepartment();
+            if (ViewBag.message != "Save Successfully")
+            {
+                ViewBag.Message2 = teacherManager.UpdateRemainingCredit(teacherId, RemainCredit);
+            }
+            return View();
         }
 
-        public bool OverlapCourse(int tid, int cid)
-        {
-            SqlConnection Connection = new SqlConnection(connectinDB);
-            string query = "SELECT * FROM CourseAssign WHERE TeacherId=" + tid + " AND CourseId=" + cid + "";
-            //Command.CommandText = Query;
-            SqlCommand cmd = new SqlCommand(query, Connection);
-            SqlDataReader Reader =cmd.ExecuteReader();
-            Connection.Open();
-            Reader = cmd.ExecuteReader();
-            if (Reader.HasRows)
-            {
-                return true;
-            }
 
-            Reader.Close();
-            Connection.Close();
-            return false;
+        public JsonResult GetTeacherByDepartmentId(int departmentId)
+        {
+            var teacher = teacherManager.GetAllTeachers();
+            var studentList = teacher.Where(x => x.DepartmentId == departmentId).ToList();
+            return Json(studentList, JsonRequestBehavior.AllowGet);
         }
-        public bool AssignCourse(int cid)
+        public JsonResult GetCourseCodeByDepartmentId(int departmentId)
         {
-            SqlConnection Connection = new SqlConnection(connectinDB);
-            string query = "SELECT * FROM CourseAssign WHERE CourseId =" + cid + "";
-            SqlCommand Command = new SqlCommand(query, Connection);
-            //Command.CommandText = Query;
-            SqlDataReader Reader = Command.ExecuteReader();
+            var courses = teacherManager.GetAllCourses();
+            var studentList = courses.Where(x => x.DepartmentId == departmentId).ToList();
+            return Json(studentList, JsonRequestBehavior.AllowGet);
+        }
 
-            Connection.Open();
-            Reader = Command.ExecuteReader();
-            if (Reader.HasRows)
-            {
-                return true;
-            }
-
-            Reader.Close();
-            Connection.Close();
-            return false;
+        public JsonResult GetTeacherCreditByTeacherId(int Tid)
+        {
+            TeacherManager ateacherManager = new TeacherManager();
+            var teacher = ateacherManager.GetAllTeachers();
+            var studentList = teacher.FirstOrDefault(x => x.TeacherId == Tid);
+            return Json(studentList, JsonRequestBehavior.AllowGet);
+        }
+        public JsonResult GetTeacherTakenCreditByDepartmentIdAndTeacherId(int deptId, int teacherId)
+        {
+            var remainingCredit = teacherManager.GetTakenCredit(deptId, teacherId);
+            return Json(remainingCredit, JsonRequestBehavior.AllowGet);
+        }
+        public JsonResult GetCourseNameAndCreditByCourseId(int courseId)
+        {
+            var teacher = teacherManager.GetAllCourses();
+            var studentList = teacher.Where(x => x.CourseId == courseId).ToList();
+            return Json(studentList, JsonRequestBehavior.AllowGet);
         }
     }
+
 }
