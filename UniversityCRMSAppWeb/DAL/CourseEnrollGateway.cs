@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -26,7 +26,7 @@ namespace UniversityCRMSAppWeb.DAL
                 aViewStudentDetails.Id = Convert.ToInt32(Reader["ID"]);
                 aViewStudentDetails.StudentName = Reader["StudentName"].ToString();
                 aViewStudentDetails.Email = Reader["Email"].ToString();
-                aViewStudentDetails.Name = Reader["Name"].ToString();
+                aViewStudentDetails.DepartmentName = Reader["Name"].ToString();
                 //aViewStudentDetails.RegNo = Reader["StudentReqId"].ToString();
                 viewStudentDetailses.Add(aViewStudentDetails);
             }
