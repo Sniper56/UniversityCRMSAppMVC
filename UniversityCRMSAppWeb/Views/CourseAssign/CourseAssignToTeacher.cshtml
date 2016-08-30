@@ -1,4 +1,4 @@
-﻿@using System.Runtime.InteropServices.WindowsRuntime
+@using System.Runtime.InteropServices.WindowsRuntime
 @using UniversityCRMSAppWeb.Models
 @model UniversityCRMSAppWeb.Models.CourseAssingModel
 @using System.Web.UI.WebControls
@@ -152,9 +152,11 @@
                         url: '@Url.Action("GetCourseNameAndCreditByCourseId", "CourseAssign")',
                         contentType: "application/json; charset=utf-8",
                         data: JSON.stringify(json),
-                        success: function (data) {
-                            $("#CourseName").val(data.CourseName);
-                            $("#CourseCredit").val(data.Credit);
+                        success: function (studentList) {
+                            var courseName = studentList.CourseName;
+                            var credit = studentList.Credit;
+                            $("#CourseName").val(courseName);
+                            $("#CourseCredit").val(credit);
 
                             var remainCredit = $("#remainingcredit").val();
                             var creditminus = $("#CourseCredit").val();
