@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -38,5 +38,30 @@ namespace UniversityCRMSAppWeb.DAL
             connection.Close();
             return students;
         }
+
+        public ViewStudentDetails GetAllStudentsByStudentId(int id)
+        {
+            SqlConnection connection = new SqlConnection(connectinDB);
+            string Query = "SELECT * FROM ViewStudentDetail where ID='" + id + "'";
+            SqlCommand Command = new SqlCommand(Query, connection);
+            ViewStudentDetails aStudent=new ViewStudentDetails();
+            connection.Open();
+            SqlDataReader Reader = Command.ExecuteReader();
+            while (Reader.Read())
+            {
+            
+                aStudent.StudentName= Reader["StudentName"].ToString();
+                aStudent.Email = Reader["Email"].ToString();
+                aStudent.DepartmentName = Reader["Name"].ToString();
+               
+
+            }
+            Reader.Close();
+            connection.Close();
+            return aStudent;
+        }
+
+
+
     }
 }
