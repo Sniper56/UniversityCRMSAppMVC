@@ -63,3 +63,17 @@ G:\BITM\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Helpers.xml
 G:\BITM\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Mvc.xml
 G:\BITM\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\Newtonsoft.Json.dll
 G:\BITM\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\Newtonsoft.Json.xml
+F:\UniversityCRMSAppMVC\UniversityCRMSAppWeb\obj\Debug\UniversityCRMSAppWeb.csprojResolveAssemblyReference.cache
+F:\UniversityCRMSAppMVC\UniversityCRMSAppWeb\obj\Debug\UniversityCRMSAppWeb.dll
+F:\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\UniversityCRMSAppWeb.dll.config
+F:\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\UniversityCRMSAppWeb.dll
+F:\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\UniversityCRMSAppWeb.pdb
+F:\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\Newtonsoft.Json.dll
+F:\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\Newtonsoft.Json.xml
+F:\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Razor.xml
+F:\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.xml
+F:\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.Deployment.xml
+F:\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Webpages.Razor.xml
+F:\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Helpers.xml
+F:\UniversityCRMSAppMVC\UniversityCRMSAppWeb\bin\System.Web.Mvc.xml
+F:\UniversityCRMSAppMVC\UniversityCRMSAppWeb\obj\Debug\UniversityCRMSAppWeb.pdb

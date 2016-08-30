@@ -11,7 +11,7 @@ namespace UniversityCRMSAppWeb.DAL
     public class CourseEnrollGateway
     {
         string connectionString = WebConfigurationManager.ConnectionStrings["UniversityCRMS"].ConnectionString;
-        
+
         public List<ViewStudentDetails> GetAllStudentDetails(int studentId)
         {
             SqlConnection connection = new SqlConnection(connectionString);
@@ -37,7 +37,7 @@ namespace UniversityCRMSAppWeb.DAL
         }
 
 
-         public List<ViewCourseFromStudentDepartmentName> GetAllCourseFromStudentDepartmentNames(int studentId)
+        public List<ViewCourseFromStudentDepartmentName> GetAllCourseFromStudentDepartmentNames(int studentId)
         {
             SqlConnection connection = new SqlConnection(connectionString);
             List<ViewCourseFromStudentDepartmentName> viewCourseFromStudentDepartment = new List<ViewCourseFromStudentDepartmentName>();
@@ -65,7 +65,7 @@ namespace UniversityCRMSAppWeb.DAL
         {
             SqlConnection connection = new SqlConnection(connectionString);
             string Query = "INSERT INTO EnrollInACourse(StudentId,CourseId,Date,Status) VALUES('" + courseEnroll.StudentId + "','" + courseEnroll.CourseId + "','" + courseEnroll.EnrollDate + "','True')";
-            SqlCommand Command=new SqlCommand(Query,connection);
+            SqlCommand Command = new SqlCommand(Query, connection);
             connection.Open();
             int rowAffected = Command.ExecuteNonQuery();
             connection.Close();
@@ -77,7 +77,7 @@ namespace UniversityCRMSAppWeb.DAL
         {
             SqlConnection connection = new SqlConnection(connectionString);
             string Query = "SELECT * FROM EnrollInACourse WHERE StudentId='" + courseEnroll.StudentId + "' AND CourseId='" + courseEnroll.CourseId + "'";
-            SqlCommand Command=new SqlCommand(Query,connection);
+            SqlCommand Command = new SqlCommand(Query, connection);
             string message = null;
             connection.Open();
             SqlDataReader Reader = Command.ExecuteReader();
